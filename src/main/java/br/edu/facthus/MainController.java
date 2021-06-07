@@ -32,6 +32,7 @@ public class MainController {
 	@FXML
 	private void cadastroCorretores() {
 		// Tarefa 01: mostrar a janela de corretores
+		mostraJanela("corretores.fxml", "Cadastro de corretores ");
 	}
 	
 	@FXML
