@@ -36,7 +36,7 @@ public class MainController {
 	
 	@FXML
 	private void cadastroImoveis() {
-		// Tarefa 02: mostrar a janela de imoveis
+		mostraJanela("imoveis.fxml", "Cadastro de imoveis");
 	}
 	
 	@FXML
