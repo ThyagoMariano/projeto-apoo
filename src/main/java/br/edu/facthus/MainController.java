@@ -41,7 +41,7 @@ public class MainController {
 	
 	@FXML
 	private void cadastroInquilinos() {
-		// Tarefa 06: mostrar a janela de inquilinos
+		mostraJanela("inquilinos.fxml", "Cadastro de Inquilinos");
 	}
 	
 }
