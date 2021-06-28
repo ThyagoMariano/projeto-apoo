@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="480.0" prefWidth="640.0" spacing="20.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="640.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
 	
 	<children>
-		<Label fx:id="lblMensagem" text="Tarefa 09: completar..." />
+		<Label id="lblMensagem" fx:id="lblMensagem" prefHeight="31.0" prefWidth="97.0" text="Cadastro de Serviço" textFill="#4d2c2c" />
+      <GridPane prefHeight="90.0" prefWidth="669.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="133.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.0" minWidth="10.0" prefWidth="507.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            
+            <Label text="Registro:" />
+            <Label text="Valor do Aluguel:" GridPane.rowIndex="1" />
+            <Label text="Nome do Proprietario:" GridPane.rowIndex="2" />
+            <TextField fx:id="txtRegistro" prefHeight="22.0" prefWidth="405.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtAluguel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtProprietario" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+       <HBox alignment="TOP_CENTER" prefHeight="41.0" prefWidth="640.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" text="Cadastrar" />
+            <Button mnemonicParsing="false" text="Listar" />
+         </children>
+      </HBox>
+      <TableView fx:id="tblImovel" editable="true" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="cRegistro" prefWidth="203.0" text="Registro" />
+            <TableColumn fx:id="cProprietario" prefWidth="231.0" text="Proprietario" />
+            <TableColumn fx:id="cAluguel" prefWidth="199.0" text="Aluguel" />
+        </columns>
+      </TableView>
 	</children>
 </VBox>
